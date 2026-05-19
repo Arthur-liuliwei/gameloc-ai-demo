@@ -142,7 +142,8 @@ https://www.linkedin.com/in/arthurliuliwei/
 
 ## Local Development
 
-\`\`\`bash
+bash
+```
 npm install
 npm run dev
-\`\`\`
+```
