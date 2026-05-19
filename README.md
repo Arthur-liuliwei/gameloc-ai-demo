@@ -133,7 +133,7 @@ Background:
 ## Contact
 
 Arthur Liu  
-Email: arthur.oops@gmail.com
+Email: liuliwei@outlook.com
 
 LinkedIn / portfolio:
 https://www.linkedin.com/in/arthurliuliwei/
