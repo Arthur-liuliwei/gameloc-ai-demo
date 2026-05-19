@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+  --gl-bg: #020617;
+  --gl-surface: rgba(15, 23, 42, 0.72);
+  --gl-surface-elevated: rgba(15, 23, 42, 0.92);
+  --gl-border: rgba(51, 65, 85, 0.85);
+  --gl-border-accent: rgba(34, 211, 238, 0.28);
+  --gl-text: #f1f5f9;
+  --gl-text-muted: #94a3b8;
+  --gl-accent: #22d3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  font-family: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--gl-bg);
+  color: var(--gl-text);
+}
+
+@layer components {
+  .gl-card {
+    @apply rounded-xl border border-slate-800/90 bg-slate-900/60 shadow-sm shadow-black/20;
+  }
+
+  .gl-panel {
+    @apply rounded-2xl border border-slate-800/90 bg-slate-900/55 p-5 shadow-sm shadow-black/15 sm:p-6;
+  }
+
+  .gl-heading-page {
+    @apply text-2xl font-semibold tracking-tight text-white md:text-3xl;
+  }
+
+  .gl-heading-section {
+    @apply text-base font-semibold text-slate-100 sm:text-lg;
+  }
+
+  .gl-input {
+    @apply rounded-lg border border-slate-700/90 bg-slate-950/90 px-3 py-2 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-500/45 focus:ring-1 focus:ring-cyan-500/25;
+  }
+
+  .gl-select {
+    @apply rounded-lg border border-slate-700/90 bg-slate-950/90 px-3 py-2 text-sm text-slate-100 outline-none transition placeholder:text-slate-500 focus:border-cyan-500/45 focus:ring-1 focus:ring-cyan-500/25 cursor-pointer;
+  }
+
+  .gl-btn {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .gl-btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 border-cyan-500/40 bg-cyan-500/15 text-cyan-50 hover:border-cyan-400/50 hover:bg-cyan-500/25;
+  }
+
+  .gl-btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 border-slate-700 bg-slate-900/80 text-slate-200 hover:border-slate-600 hover:bg-slate-800;
+  }
+
+  .gl-btn-ghost {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 border-transparent text-slate-300 hover:border-slate-700 hover:bg-slate-800/80 hover:text-white;
+  }
+
+  .gl-segmented {
+    @apply inline-flex rounded-lg border border-slate-700/90 bg-slate-950/80 p-0.5;
+  }
+
+  .gl-segmented-item {
+    @apply rounded-md px-3 py-1.5 text-xs font-medium text-slate-400 transition hover:text-slate-200;
+  }
+
+  .gl-segmented-item-active {
+    @apply bg-cyan-500/20 text-cyan-100 ring-1 ring-cyan-500/30;
+  }
+
+  .gl-badge {
+    @apply inline-flex rounded-full border px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide;
+  }
+
+  .gl-mini-stat {
+    @apply rounded-xl border border-slate-800/90 bg-slate-900/60 p-3 shadow-sm shadow-black/20;
+  }
+
+  .gl-mini-stat-label {
+    @apply text-xs font-medium text-slate-400;
+  }
+
+  .gl-mini-stat-value {
+    @apply mt-1 text-lg font-semibold tabular-nums tracking-tight;
+  }
+
+  .gl-toast {
+    @apply rounded-lg border border-emerald-500/35 bg-emerald-500/10 px-4 py-2 text-sm text-emerald-100;
+  }
+
+  .gl-subpanel {
+    @apply rounded-xl border border-slate-800/90 bg-slate-950/45 p-4;
+  }
+
+  .gl-table-wrap {
+    @apply overflow-x-auto rounded-xl border border-slate-800/90 bg-slate-950/40;
+  }
+
+  .gl-btn-sm {
+    @apply inline-flex items-center justify-center rounded-lg border px-2.5 py-1.5 text-[11px] font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .gl-btn-success {
+    @apply inline-flex items-center justify-center rounded-lg border px-3 py-2 text-xs font-semibold transition disabled:cursor-not-allowed disabled:opacity-50 border-emerald-500/40 bg-emerald-500/15 text-emerald-50 hover:border-emerald-400/50 hover:bg-emerald-500/25;
+  }
+
+  .gl-quick-action {
+    @apply flex flex-col gap-1 rounded-xl border border-slate-800/90 bg-slate-950/50 p-4 text-left transition hover:border-cyan-500/30 hover:bg-slate-900/80;
+  }
+
+  .gl-workflow-step {
+    @apply flex flex-1 flex-col items-center gap-1 rounded-lg border border-slate-800/80 bg-slate-950/50 px-2 py-3 text-center;
+  }
+
+  .gl-workflow-step-active {
+    @apply border-cyan-500/35 bg-cyan-500/[0.08] text-cyan-100;
+  }
+}
